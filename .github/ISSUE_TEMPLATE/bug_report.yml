@@ -1,0 +1,78 @@
+name: Bug report
+description: Something on danceapp.net or in the DanceApp does not work as expected.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping us make DanceApp better! You can write in any language.
+
+        **Please note:** this page is public. Do not post passwords, order numbers, e-mail addresses, phone numbers or other personal data.
+        Questions about your ticket or order are best sent directly to the event organiser.
+        Found a security issue? Please do **not** report it here – write to security@danceapp.net instead.
+
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Where did it happen? (filled in automatically when you come from the website)
+      placeholder: https://danceapp.net/en/events/...
+    validations:
+      required: false
+
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where are you using DanceApp?
+      options:
+        - Website in the browser
+        - DanceApp for iPhone / iPad
+        - DanceApp for Android
+        - Organiser / admin area of an event
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem. Screenshots help a lot – you can paste or drag them into this field.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you click, step by step?
+      placeholder: |
+        1. Open ...
+        2. Click on ...
+        3. ...
+    validations:
+      required: false
+
+  - type: input
+    id: device
+    attributes:
+      label: Device and browser
+      placeholder: e.g. iPhone 15, Safari / Windows 11, Chrome
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Filled in automatically when you come from the website.
+    validations:
+      required: false
